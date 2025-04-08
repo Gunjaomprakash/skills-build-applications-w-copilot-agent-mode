@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-&)cqo)xxj+99+6vecf@c9^8ctbs&25#5w$(g#h8)w5=qx7%6^)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'reimagined-trout-w65pxq4rjh9vr-8000.app.github.dev']
 
 
 # Application definition
@@ -144,3 +144,9 @@ CORS_ALLOW_HEADERS = [
     'authorization',
     'x-csrftoken',
 ]
+
+# Add the codespace name to the settings for URL endpoint configuration
+CODESPACE_NAME = "reimagined-trout-w65pxq4rjh9vr"
+
+# Add the codespace URL to the CORS_ORIGIN_ALLOW_ALL setting to allow unauthenticated access for testing purposes
+CORS_ORIGIN_ALLOW_ALL = True
